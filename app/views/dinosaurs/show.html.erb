@@ -2,3 +2,8 @@
 
 <p>Age: <%= @dinosaurs.age %></p>
 <%= image_tag @dinosaurs.image_url %>
+
+<hr>
+
+<%= link_to "[Edit]", edit_dinosaur_path(@dinosaurs.id) %>
+<%= link_to "[Delete]", dinosaur_path(@dinosaur.id), method: :delete, data: { confirm: "Are you sure?" } %>
